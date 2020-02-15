@@ -61,12 +61,14 @@ public class GameOfLife {
         int neighbors = Top + Bottom +  Right + Left + TopLeft + TopRight + BottomLeft + BottomRight;
         return neighbors;
     }
+
     public void oneStep() {
+        //I made the previous become the board.
         previous = Board;
         for (int a = 0; a < size; a++) {
             for (int b = 0; a < size; b++) {
                 int Alive = neighbors(a, b);
-
+                // This is the rules
                 if ((previous[a][b] == 1) && (Alive < 2))
                     Board[a][b] = 0;
                 else if ((previous[a][b] == 1) && (Alive > 3))
@@ -78,6 +80,7 @@ public class GameOfLife {
             }
         }
     }
+
     public void evolution (int n){
         int i = 0;
         while(i < n){
@@ -88,3 +91,6 @@ public class GameOfLife {
 
 
 }
+
+
+// I had some helped by Alan Gamez

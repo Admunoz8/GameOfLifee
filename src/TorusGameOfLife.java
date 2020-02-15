@@ -1,9 +1,9 @@
 
 public class TorusGameOfLife extends GameOfLife{
 
+// This is extending the constructors. It also inherits the methods.
 
-
-
+// I had to change the neighbors part. I used a modulus.
     public int neighbors(int r, int c) {
         int Top = 0, Bottom = 0, Right = 0, Left = 0, TopLeft = 0, TopRight = 0, BottomLeft = 0, BottomRight = 0;
 
@@ -28,3 +28,4 @@ public class TorusGameOfLife extends GameOfLife{
 
     }
     }
+
